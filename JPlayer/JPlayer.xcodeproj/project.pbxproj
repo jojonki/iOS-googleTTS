@@ -1,0 +1,327 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7921C488168DB4E4002028F7 /* VoiceInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7921C487168DB4E4002028F7 /* VoiceInputView.m */; };
+		79EC5BF3168ACBC10046042D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EC5BF2168ACBC10046042D /* UIKit.framework */; };
+		79EC5BF5168ACBC10046042D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EC5BF4168ACBC10046042D /* Foundation.framework */; };
+		79EC5BF7168ACBC10046042D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EC5BF6168ACBC10046042D /* CoreGraphics.framework */; };
+		79EC5BFD168ACBC10046042D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 79EC5BFB168ACBC10046042D /* InfoPlist.strings */; };
+		79EC5BFF168ACBC10046042D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EC5BFE168ACBC10046042D /* main.m */; };
+		79EC5C03168ACBC10046042D /* JPlayerAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EC5C02168ACBC10046042D /* JPlayerAppDelegate.m */; };
+		79EC5C05168ACBC10046042D /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 79EC5C04168ACBC10046042D /* Default.png */; };
+		79EC5C07168ACBC20046042D /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79EC5C06168ACBC10046042D /* Default@2x.png */; };
+		79EC5C09168ACBC20046042D /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 79EC5C08168ACBC20046042D /* Default-568h@2x.png */; };
+		79EC5C0C168ACBC20046042D /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79EC5C0A168ACBC20046042D /* MainStoryboard_iPhone.storyboard */; };
+		79EC5C0F168ACBC20046042D /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79EC5C0D168ACBC20046042D /* MainStoryboard_iPad.storyboard */; };
+		79EC5C12168ACBC20046042D /* JPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79EC5C11168ACBC20046042D /* JPlayerViewController.m */; };
+		79EC5C19168ACC7A0046042D /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EC5C18168ACC7A0046042D /* MediaPlayer.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7921C486168DB4E4002028F7 /* VoiceInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceInputView.h; sourceTree = "<group>"; };
+		7921C487168DB4E4002028F7 /* VoiceInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceInputView.m; sourceTree = "<group>"; };
+		79EC5BEE168ACBC10046042D /* JPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79EC5BF2168ACBC10046042D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		79EC5BF4168ACBC10046042D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		79EC5BF6168ACBC10046042D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		79EC5BFA168ACBC10046042D /* JPlayer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "JPlayer-Info.plist"; sourceTree = "<group>"; };
+		79EC5BFC168ACBC10046042D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		79EC5BFE168ACBC10046042D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		79EC5C00168ACBC10046042D /* JPlayer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JPlayer-Prefix.pch"; sourceTree = "<group>"; };
+		79EC5C01168ACBC10046042D /* JPlayerAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPlayerAppDelegate.h; sourceTree = "<group>"; };
+		79EC5C02168ACBC10046042D /* JPlayerAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPlayerAppDelegate.m; sourceTree = "<group>"; };
+		79EC5C04168ACBC10046042D /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		79EC5C06168ACBC10046042D /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		79EC5C08168ACBC20046042D /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		79EC5C0B168ACBC20046042D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		79EC5C0E168ACBC20046042D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		79EC5C10168ACBC20046042D /* JPlayerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JPlayerViewController.h; sourceTree = "<group>"; };
+		79EC5C11168ACBC20046042D /* JPlayerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JPlayerViewController.m; sourceTree = "<group>"; };
+		79EC5C18168ACC7A0046042D /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		79EC5BEB168ACBC10046042D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79EC5C19168ACC7A0046042D /* MediaPlayer.framework in Frameworks */,
+				79EC5BF3168ACBC10046042D /* UIKit.framework in Frameworks */,
+				79EC5BF5168ACBC10046042D /* Foundation.framework in Frameworks */,
+				79EC5BF7168ACBC10046042D /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		79EC5BE3168ACBC10046042D = {
+			isa = PBXGroup;
+			children = (
+				79EC5BF8168ACBC10046042D /* JPlayer */,
+				79EC5BF1168ACBC10046042D /* Frameworks */,
+				79EC5BEF168ACBC10046042D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		79EC5BEF168ACBC10046042D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				79EC5BEE168ACBC10046042D /* JPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		79EC5BF1168ACBC10046042D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79EC5C18168ACC7A0046042D /* MediaPlayer.framework */,
+				79EC5BF2168ACBC10046042D /* UIKit.framework */,
+				79EC5BF4168ACBC10046042D /* Foundation.framework */,
+				79EC5BF6168ACBC10046042D /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		79EC5BF8168ACBC10046042D /* JPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				79EC5C01168ACBC10046042D /* JPlayerAppDelegate.h */,
+				79EC5C02168ACBC10046042D /* JPlayerAppDelegate.m */,
+				79EC5C0A168ACBC20046042D /* MainStoryboard_iPhone.storyboard */,
+				79EC5C0D168ACBC20046042D /* MainStoryboard_iPad.storyboard */,
+				79EC5C10168ACBC20046042D /* JPlayerViewController.h */,
+				79EC5C11168ACBC20046042D /* JPlayerViewController.m */,
+				79EC5BF9168ACBC10046042D /* Supporting Files */,
+				7921C486168DB4E4002028F7 /* VoiceInputView.h */,
+				7921C487168DB4E4002028F7 /* VoiceInputView.m */,
+			);
+			path = JPlayer;
+			sourceTree = "<group>";
+		};
+		79EC5BF9168ACBC10046042D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				79EC5BFA168ACBC10046042D /* JPlayer-Info.plist */,
+				79EC5BFB168ACBC10046042D /* InfoPlist.strings */,
+				79EC5BFE168ACBC10046042D /* main.m */,
+				79EC5C00168ACBC10046042D /* JPlayer-Prefix.pch */,
+				79EC5C04168ACBC10046042D /* Default.png */,
+				79EC5C06168ACBC10046042D /* Default@2x.png */,
+				79EC5C08168ACBC20046042D /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		79EC5BED168ACBC10046042D /* JPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79EC5C15168ACBC20046042D /* Build configuration list for PBXNativeTarget "JPlayer" */;
+			buildPhases = (
+				79EC5BEA168ACBC10046042D /* Sources */,
+				79EC5BEB168ACBC10046042D /* Frameworks */,
+				79EC5BEC168ACBC10046042D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JPlayer;
+			productName = JPlayer;
+			productReference = 79EC5BEE168ACBC10046042D /* JPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		79EC5BE5168ACBC10046042D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = JPlayer;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = jonki;
+			};
+			buildConfigurationList = 79EC5BE8168ACBC10046042D /* Build configuration list for PBXProject "JPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 79EC5BE3168ACBC10046042D;
+			productRefGroup = 79EC5BEF168ACBC10046042D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				79EC5BED168ACBC10046042D /* JPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		79EC5BEC168ACBC10046042D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79EC5BFD168ACBC10046042D /* InfoPlist.strings in Resources */,
+				79EC5C05168ACBC10046042D /* Default.png in Resources */,
+				79EC5C07168ACBC20046042D /* Default@2x.png in Resources */,
+				79EC5C09168ACBC20046042D /* Default-568h@2x.png in Resources */,
+				79EC5C0C168ACBC20046042D /* MainStoryboard_iPhone.storyboard in Resources */,
+				79EC5C0F168ACBC20046042D /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		79EC5BEA168ACBC10046042D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79EC5BFF168ACBC10046042D /* main.m in Sources */,
+				79EC5C03168ACBC10046042D /* JPlayerAppDelegate.m in Sources */,
+				79EC5C12168ACBC20046042D /* JPlayerViewController.m in Sources */,
+				7921C488168DB4E4002028F7 /* VoiceInputView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		79EC5BFB168ACBC10046042D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79EC5BFC168ACBC10046042D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		79EC5C0A168ACBC20046042D /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79EC5C0B168ACBC20046042D /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		79EC5C0D168ACBC20046042D /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79EC5C0E168ACBC20046042D /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		79EC5C13168ACBC20046042D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		79EC5C14168ACBC20046042D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		79EC5C16168ACBC20046042D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JPlayer/JPlayer-Prefix.pch";
+				INFOPLIST_FILE = "JPlayer/JPlayer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		79EC5C17168ACBC20046042D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "JPlayer/JPlayer-Prefix.pch";
+				INFOPLIST_FILE = "JPlayer/JPlayer-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		79EC5BE8168ACBC10046042D /* Build configuration list for PBXProject "JPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79EC5C13168ACBC20046042D /* Debug */,
+				79EC5C14168ACBC20046042D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79EC5C15168ACBC20046042D /* Build configuration list for PBXNativeTarget "JPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79EC5C16168ACBC20046042D /* Debug */,
+				79EC5C17168ACBC20046042D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 79EC5BE5168ACBC10046042D /* Project object */;
+}
