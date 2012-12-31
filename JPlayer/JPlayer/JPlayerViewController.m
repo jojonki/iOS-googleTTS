@@ -46,6 +46,15 @@
     [_player beginGeneratingPlaybackNotifications];
     
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationWillEnterForeground:)
+                                                 name:UIApplicationWillEnterForegroundNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(applicationDidEnterBackground:)
+                                                 name:UIApplicationDidEnterBackgroundNotification
+                                                    object:nil];
+    
+    
     // 音声入力に関するNotificationの設定
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(dictationRecordingDidEnd:)
@@ -61,8 +70,8 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
-    if (![_textInputView isFirstResponder]) {
-        [_textInputView becomeFirstResponder];
+    if (![_voiceInputView isFirstResponder]) {
+        [_voiceInputView becomeFirstResponder];
     }
     _dictationController =
                 [NSClassFromString(@"UIDictationController") performSelector:@selector(sharedInstance)];
@@ -86,10 +95,21 @@
     [self setSongInfoLabel:nil];
     [self setArtistInfoLabel:nil];
     [self setArtworkImage:nil];
-    [self setTextInputView:nil];
+    [self setVoiceInputView:nil];
+    [self setDebugLabel:nil];
     [super viewDidUnload];
 }
 
+- (void)applicationWillEnterForeground:(NSNotification *)notification {
+    if (![_voiceInputView isFirstResponder]) {
+        [_voiceInputView becomeFirstResponder];
+    }
+}
+
+- (void)applicationDidEnterBackground:(NSNotification *)notification {
+    [self cancelDictation];
+    [_voiceInputView resignFirstResponder];
+}
 
 #pragma mark 音楽ののNotificationハンドラ
 - (void)handle_PlaybackStateChanged {
@@ -115,11 +135,11 @@
 
 #pragma mark 音楽の操作
 
-- (IBAction)pushedNextButton:(id)sender {
+- (IBAction)pushNextButton:(id)sender {
     [_player skipToNextItem];
 }
 
-- (IBAction)pushedPlayOrStopBUtton:(id)sender {
+- (IBAction)pushPlayOrStopBUtton:(id)sender {
     if( _isPlaying )
     {
         [_player pause];
@@ -134,7 +154,7 @@
     }
 }
 
-- (IBAction)pushedPrevButton:(id)sender {
+- (IBAction)pushPrevButton:(id)sender {
     [_player skipToPreviousItem];
 }
 
@@ -169,15 +189,21 @@
 #pragma mark 音声入力
 - (void)startDictation {
     [_dictationController performSelector:@selector(startDictation)];
+    _debugLabel.text = @"start dictation";
  }
 
 - (void)stopDictation {
     [_dictationController performSelector:@selector(stopDictation)];
+}
 
+- (void)cancelDictation {
+    [_dictationController performSelector:@selector(cancelDictation)];
+    _debugLabel.text = @"";
 }
 
 - (void)dictationRecordingDidEnd:(NSNotification *)notification {
     NSLog(@"dictationRecordingDidEnd");
+    _debugLabel.text = @"";
 }
 
 - (void)dictationRecognitionSucceeded:(NSNotification *)notification {
@@ -186,6 +212,7 @@
     NSArray *dictationResult = [userInfo objectForKey:DictationResultKey];
     NSString *text = [self wholeTestWithDictationResult:dictationResult];
     NSLog(@"%@", text);
+    _debugLabel.text = text;
 
     if (_isPushedArtistButton) {
         [self playSongWithArtistName:text];
@@ -195,7 +222,8 @@
 }
 
 - (void)dictationRecognitionFailed:(NSNotification *)notification {
-        NSLog(@"dictationRecognitionFailed");
+    NSLog(@"dictationRecognitionFailed");
+    _debugLabel.text = @"Failed";
 }
 
 - (NSString *)wholeTestWithDictationResult:(NSArray *)dictationResult {
@@ -208,6 +236,9 @@
 }
 
 - (IBAction)pushDownSongVoiceInputButton:(id)sender {
+    if (![_voiceInputView isFirstResponder]) {
+        NSLog(@"not firstResponder Song");
+    }
     _isPushedArtistButton = NO;
     _isPushedSongButton = YES;
     [self startDictation];

@@ -27,7 +27,6 @@ NSString * const DictationResultKey = @"DictationResultKey";
     return [[UIView alloc] initWithFrame:CGRectZero];
 }
 
-
 - (UITextRange *)selectedTextRange {
     return nil;
 }

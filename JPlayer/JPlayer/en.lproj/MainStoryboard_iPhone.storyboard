@@ -25,7 +25,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pushedPlayOrStopBUtton:" destination="2" eventType="touchUpInside" id="XvI-Lc-UX9"/>
+                                    <action selector="pushPlayOrStopButton:" destination="2" eventType="touchUpInside" id="nin-Y9-1iH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N2H-MV-BdP">
@@ -40,7 +40,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pushedNextButton:" destination="2" eventType="touchUpInside" id="LUd-gH-6QC"/>
+                                    <action selector="pushNextButton:" destination="2" eventType="touchUpInside" id="Y78-r7-QbW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kMJ-cs-upx">
@@ -55,7 +55,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pushedPrevButton:" destination="2" eventType="touchUpInside" id="hC5-BJ-ts5"/>
+                                    <action selector="pushPrevButton:" destination="2" eventType="touchUpInside" id="1ku-zq-X27"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="song" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="iay-Nh-Nkz">
@@ -77,7 +77,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AZc-7W-CMY" userLabel="Artist Search Button">
-                                <rect key="frame" x="236" y="91" width="64" height="33"/>
+                                <rect key="frame" x="236" y="216" width="64" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Song">
@@ -93,12 +93,12 @@
                                 </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" id="fbI-Lb-Sb1" customClass="VoiceInputView">
-                                <rect key="frame" x="145" y="7" width="30" height="32"/>
+                                <rect key="frame" x="143" y="8" width="34" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.10974042581136068" blue="0.15692166261973628" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sF4-MT-alo">
-                                <rect key="frame" x="236" y="49" width="64" height="33"/>
+                                <rect key="frame" x="236" y="160" width="64" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Artist">
@@ -113,22 +113,30 @@
                                     <action selector="pushUpArtistVoiceInputButton:" destination="2" eventType="touchUpInside" id="hh9-mG-OUo"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cjR-GX-HWo">
+                                <rect key="frame" x="19" y="324" width="282" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.59878141983695654" green="0.59878141983695654" blue="0.59878141983695654" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="artistInfoLabel" destination="c5d-Aw-a2R" id="UOg-HK-LbH"/>
                         <outlet property="artworkImage" destination="uff-uj-ImJ" id="SAv-7C-G5V"/>
+                        <outlet property="debugLabel" destination="cjR-GX-HWo" id="UOQ-6M-iPB"/>
                         <outlet property="nextButton" destination="N2H-MV-BdP" id="BGy-9d-Fdr"/>
                         <outlet property="playOrStopButton" destination="mij-za-3sd" id="Tyo-nZ-ztM"/>
                         <outlet property="prevButton" destination="kMJ-cs-upx" id="Cof-R5-7TH"/>
                         <outlet property="songInfoLabel" destination="iay-Nh-Nkz" id="t7c-JU-Tk2"/>
-                        <outlet property="textInputView" destination="fbI-Lb-Sb1" id="871-Ue-pCE"/>
+                        <outlet property="voiceInputView" destination="fbI-Lb-Sb1" id="b8R-We-6fd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8" y="-183"/>
+            <point key="canvasLocation" x="4" y="-191"/>
         </scene>
     </scenes>
     <classes>
@@ -137,18 +145,20 @@
             <relationships>
                 <relationship kind="action" name="pushDownArtistVoiceInputButton:"/>
                 <relationship kind="action" name="pushDownSongVoiceInputButton:"/>
+                <relationship kind="action" name="pushNextButton:"/>
+                <relationship kind="action" name="pushPlayOrStopBUtton:"/>
+                <relationship kind="action" name="pushPlayOrStopButton:"/>
+                <relationship kind="action" name="pushPrevButton:"/>
                 <relationship kind="action" name="pushUpArtistVoiceInputButton:"/>
                 <relationship kind="action" name="pushUpSongVoiceInputButton:"/>
-                <relationship kind="action" name="pushedNextButton:"/>
-                <relationship kind="action" name="pushedPlayOrStopBUtton:"/>
-                <relationship kind="action" name="pushedPrevButton:"/>
                 <relationship kind="outlet" name="artistInfoLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="artworkImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="debugLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="playOrStopButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="prevButton" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="songInfoLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="textInputView" candidateClass="VoiceInputView"/>
+                <relationship kind="outlet" name="voiceInputView" candidateClass="VoiceInputView"/>
             </relationships>
         </class>
         <class className="VoiceInputView" superclassName="UIView">
