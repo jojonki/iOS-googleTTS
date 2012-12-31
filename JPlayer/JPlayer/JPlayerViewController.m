@@ -20,14 +20,8 @@
 {
     [super viewDidLoad];
     
-    _player = [MPMusicPlayerController iPodMusicPlayer];\
-    if ([_player playbackState] == MPMusicPlaybackStatePlaying) {
-        _isPlaying = YES;
-        [_playOrStopButton setTitle:@"Ⅱ" forState:UIControlStateNormal];
-    } else {
-        _isPlaying = NO;
-        [_playOrStopButton setTitle:@"▷" forState:UIControlStateNormal];
-    }
+    _player = [MPMusicPlayerController iPodMusicPlayer];
+    [self refreshPlayOrStopButtonState];
     
     // 音楽プレイヤーに関するNotificationの設定
     _ncenter = [NSNotificationCenter defaultCenter];
@@ -104,6 +98,7 @@
     if (![_voiceInputView isFirstResponder]) {
         [_voiceInputView becomeFirstResponder];
     }
+    [self refreshPlayOrStopButtonState];
 }
 
 - (void)applicationDidEnterBackground:(NSNotification *)notification {
@@ -141,18 +136,7 @@
 
 
 - (IBAction)pushPlayOrStopButton:(id)sender {
-    if( _isPlaying )
-    {
-        [_player pause];
-        [_playOrStopButton setTitle:@"▷" forState:UIControlStateNormal];
-        _isPlaying = NO;
-    }
-    else
-    {
-        [_player play];
-        [_playOrStopButton setTitle:@"Ⅱ" forState:UIControlStateNormal];
-        _isPlaying = YES;
-    }
+    [self refreshPlayOrStopButtonState];
 }
 
 - (IBAction)pushPrevButton:(id)sender {
@@ -184,6 +168,21 @@
         [_player setQueueWithQuery:query];  // 検索してヒットした曲を再生キューにセット
         [_player setShuffleMode:MPMusicShuffleModeSongs]; // セットしたキューをシャッフル
         [_player play]; // 再生する
+    }
+}
+
+- (void)refreshPlayOrStopButtonState {
+    if( _isPlaying )
+    {
+        [_player pause];
+        [_playOrStopButton setTitle:@"▷" forState:UIControlStateNormal];
+        _isPlaying = NO;
+    }
+    else
+    {
+        [_player play];
+        [_playOrStopButton setTitle:@"Ⅱ" forState:UIControlStateNormal];
+        _isPlaying = YES;
     }
 }
 
