@@ -2,14 +2,23 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIApplicationExitsOnSuspend</key>
-	<false/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
 	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
+	<key>CFBundleIcons</key>
+	<dict>
+		<key>CFBundlePrimaryIcon</key>
+		<dict>
+			<key>CFBundleIconFiles</key>
+			<array>
+				<string>oden72.png</string>
+				<string>oden144.png</string>
+			</array>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>ios.net.jonki.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -26,6 +35,8 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>UIApplicationExitsOnSuspend</key>
+	<false/>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard_iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>

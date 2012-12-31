@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		7921C488168DB4E4002028F7 /* VoiceInputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7921C487168DB4E4002028F7 /* VoiceInputView.m */; };
+		79DCFCC0169136A8009D2BC2 /* oden_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 79DCFCBF169136A8009D2BC2 /* oden_portrait.png */; };
+		79DCFCC3169136B4009D2BC2 /* oden144.png in Resources */ = {isa = PBXBuildFile; fileRef = 79DCFCC2169136B4009D2BC2 /* oden144.png */; };
+		79DCFCC5169136C0009D2BC2 /* oden72.png in Resources */ = {isa = PBXBuildFile; fileRef = 79DCFCC4169136C0009D2BC2 /* oden72.png */; };
 		79EC5BF3168ACBC10046042D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EC5BF2168ACBC10046042D /* UIKit.framework */; };
 		79EC5BF5168ACBC10046042D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EC5BF4168ACBC10046042D /* Foundation.framework */; };
 		79EC5BF7168ACBC10046042D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79EC5BF6168ACBC10046042D /* CoreGraphics.framework */; };
@@ -26,6 +29,9 @@
 /* Begin PBXFileReference section */
 		7921C486168DB4E4002028F7 /* VoiceInputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VoiceInputView.h; sourceTree = "<group>"; };
 		7921C487168DB4E4002028F7 /* VoiceInputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VoiceInputView.m; sourceTree = "<group>"; };
+		79DCFCBF169136A8009D2BC2 /* oden_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oden_portrait.png; path = ../../../../../Pictures/oden_portrait.png; sourceTree = "<group>"; };
+		79DCFCC2169136B4009D2BC2 /* oden144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oden144.png; path = ../../../../../Pictures/oden144.png; sourceTree = "<group>"; };
+		79DCFCC4169136C0009D2BC2 /* oden72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oden72.png; path = ../../../../../Pictures/oden72.png; sourceTree = "<group>"; };
 		79EC5BEE168ACBC10046042D /* JPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79EC5BF2168ACBC10046042D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		79EC5BF4168ACBC10046042D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -61,6 +67,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79626F7D1691337A00857E22 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				79DCFCC4169136C0009D2BC2 /* oden72.png */,
+				79DCFCC2169136B4009D2BC2 /* oden144.png */,
+				79DCFCBF169136A8009D2BC2 /* oden_portrait.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 		79EC5BE3168ACBC10046042D = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +108,7 @@
 		79EC5BF8168ACBC10046042D /* JPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				79626F7D1691337A00857E22 /* Images */,
 				79EC5C01168ACBC10046042D /* JPlayerAppDelegate.h */,
 				79EC5C02168ACBC10046042D /* JPlayerAppDelegate.m */,
 				79EC5C0A168ACBC20046042D /* MainStoryboard_iPhone.storyboard */,
@@ -177,6 +194,9 @@
 				79EC5C09168ACBC20046042D /* Default-568h@2x.png in Resources */,
 				79EC5C0C168ACBC20046042D /* MainStoryboard_iPhone.storyboard in Resources */,
 				79EC5C0F168ACBC20046042D /* MainStoryboard_iPad.storyboard in Resources */,
+				79DCFCC0169136A8009D2BC2 /* oden_portrait.png in Resources */,
+				79DCFCC3169136B4009D2BC2 /* oden144.png in Resources */,
+				79DCFCC5169136C0009D2BC2 /* oden72.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
