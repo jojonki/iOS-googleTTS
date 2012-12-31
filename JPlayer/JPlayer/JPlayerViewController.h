@@ -13,7 +13,6 @@
 
 @interface JPlayerViewController : UIViewController
 
-@property BOOL isPlaying;
 @property MPMusicPlayerController *player;
 @property NSNotificationCenter *ncenter;
 
@@ -40,6 +39,10 @@
 
 @property BOOL isPushedArtistButton;
 @property BOOL isPushedSongButton;
+
+@property NSDate *startTime;
+@property int lastState;
+@property NSTimer *timer;
 
 @property (strong, nonatomic) IBOutlet UILabel *debugLabel;
 

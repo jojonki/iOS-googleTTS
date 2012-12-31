@@ -21,7 +21,11 @@
     [super viewDidLoad];
     
     _player = [MPMusicPlayerController iPodMusicPlayer];
-    [self refreshPlayOrStopButtonState];
+    if (MPMusicPlaybackStatePlaying == [_player playbackState]) {
+        [_playOrStopButton setTitle:@"Ⅱ" forState:UIControlStateNormal];
+    } else if ( MPMusicPlaybackStatePaused == [_player playbackState]) {
+        [_playOrStopButton setTitle:@"▷" forState:UIControlStateNormal];
+    }
     
     // 音楽プレイヤーに関するNotificationの設定
     _ncenter = [NSNotificationCenter defaultCenter];
@@ -59,6 +63,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self
                                            selector:@selector(dictationRecognitionFailed:)
                                                name:DictationRecognitionFailedNotification object:nil];
+    
+    _startTime = [[NSDate alloc] init];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -69,7 +75,8 @@
     }
     _dictationController =
                 [NSClassFromString(@"UIDictationController") performSelector:@selector(sharedInstance)];
-
+    
+    _lastState = [_player playbackState];
 }
 
 - (void)didReceiveMemoryWarning
@@ -98,7 +105,14 @@
     if (![_voiceInputView isFirstResponder]) {
         [_voiceInputView becomeFirstResponder];
     }
-    [self refreshPlayOrStopButtonState];
+
+    if (MPMusicPlaybackStatePlaying == [_player playbackState]) {
+        [_playOrStopButton setTitle:@"Ⅱ" forState:UIControlStateNormal];
+    } else if ( MPMusicPlaybackStatePaused == [_player playbackState]) {
+        [_playOrStopButton setTitle:@"▷" forState:UIControlStateNormal];
+    }
+    
+    _lastState = [_player playbackState];
 }
 
 - (void)applicationDidEnterBackground:(NSNotification *)notification {
@@ -108,6 +122,20 @@
 
 #pragma mark 音楽ののNotificationハンドラ
 - (void)handle_PlaybackStateChanged {
+    NSTimeInterval time = [[NSDate date] timeIntervalSinceDate:_startTime];
+    NSLog(@"%f", time);
+    
+    if (MPMusicPlaybackStatePlaying == [_player playbackState]
+       && MPMusicPlaybackStatePaused == _lastState
+       && time < 0.8f)
+    {
+        _isPushedArtistButton = YES;
+        _isPushedSongButton = NO;
+        [self startDictation];
+    }
+    
+    _startTime = [NSDate date];
+    _lastState = [_player playbackState];
 }
 
 - (void)handle_NowPlayingItemChanged {
@@ -136,7 +164,13 @@
 
 
 - (IBAction)pushPlayOrStopButton:(id)sender {
-    [self refreshPlayOrStopButtonState];
+    if (MPMusicPlaybackStatePlaying == [_player playbackState]) {
+        [_player pause];
+        [_playOrStopButton setTitle:@"▷" forState:UIControlStateNormal];
+    } else {//if ( MPMusicPlaybackStatePaused == [_player playbackState]) {
+        [_player play];
+        [_playOrStopButton setTitle:@"Ⅱ" forState:UIControlStateNormal];
+    }
 }
 
 - (IBAction)pushPrevButton:(id)sender {
@@ -171,26 +205,20 @@
     }
 }
 
-- (void)refreshPlayOrStopButtonState {
-    if( _isPlaying )
-    {
-        [_player pause];
-        [_playOrStopButton setTitle:@"▷" forState:UIControlStateNormal];
-        _isPlaying = NO;
-    }
-    else
-    {
-        [_player play];
-        [_playOrStopButton setTitle:@"Ⅱ" forState:UIControlStateNormal];
-        _isPlaying = YES;
-    }
-}
-
 #pragma mark 音声入力
 - (void)startDictation {
     [_dictationController performSelector:@selector(startDictation)];
     _debugLabel.text = @"start dictation";
- }
+    _timer = [NSTimer scheduledTimerWithTimeInterval:4.75
+                                              target:self
+                                            selector:@selector(timerDidEnd)
+                                            userInfo:nil
+                                             repeats:NO];
+}
+
+- (void)timerDidEnd {
+    [self stopDictation];
+}
 
 - (void)stopDictation {
     [_dictationController performSelector:@selector(stopDictation)];
