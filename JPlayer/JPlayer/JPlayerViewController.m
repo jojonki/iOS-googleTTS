@@ -139,7 +139,8 @@
     [_player skipToNextItem];
 }
 
-- (IBAction)pushPlayOrStopBUtton:(id)sender {
+
+- (IBAction)pushPlayOrStopButton:(id)sender {
     if( _isPlaying )
     {
         [_player pause];

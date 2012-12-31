@@ -25,7 +25,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="pushPlayOrStopButton:" destination="2" eventType="touchUpInside" id="nin-Y9-1iH"/>
+                                    <action selector="pushPlayOrStopButton:" destination="2" eventType="touchUpInside" id="iio-ZB-2ne"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N2H-MV-BdP">
@@ -128,7 +128,6 @@
                         <outlet property="artworkImage" destination="uff-uj-ImJ" id="SAv-7C-G5V"/>
                         <outlet property="debugLabel" destination="cjR-GX-HWo" id="UOQ-6M-iPB"/>
                         <outlet property="nextButton" destination="N2H-MV-BdP" id="BGy-9d-Fdr"/>
-                        <outlet property="playOrStopButton" destination="mij-za-3sd" id="Tyo-nZ-ztM"/>
                         <outlet property="prevButton" destination="kMJ-cs-upx" id="Cof-R5-7TH"/>
                         <outlet property="songInfoLabel" destination="iay-Nh-Nkz" id="t7c-JU-Tk2"/>
                         <outlet property="voiceInputView" destination="fbI-Lb-Sb1" id="b8R-We-6fd"/>
@@ -139,32 +138,6 @@
             <point key="canvasLocation" x="4" y="-191"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="JPlayerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/JPlayerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="pushDownArtistVoiceInputButton:"/>
-                <relationship kind="action" name="pushDownSongVoiceInputButton:"/>
-                <relationship kind="action" name="pushNextButton:"/>
-                <relationship kind="action" name="pushPlayOrStopBUtton:"/>
-                <relationship kind="action" name="pushPlayOrStopButton:"/>
-                <relationship kind="action" name="pushPrevButton:"/>
-                <relationship kind="action" name="pushUpArtistVoiceInputButton:"/>
-                <relationship kind="action" name="pushUpSongVoiceInputButton:"/>
-                <relationship kind="outlet" name="artistInfoLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="artworkImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="debugLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="nextButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="playOrStopButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="prevButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="songInfoLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="voiceInputView" candidateClass="VoiceInputView"/>
-            </relationships>
-        </class>
-        <class className="VoiceInputView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/VoiceInputView.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
