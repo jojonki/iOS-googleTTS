@@ -123,12 +123,13 @@
 #pragma mark 音楽ののNotificationハンドラ
 - (void)handle_PlaybackStateChanged {
     NSTimeInterval time = [[NSDate date] timeIntervalSinceDate:_startTime];
-    NSLog(@"%f", time);
+//    NSLog(@"%f", time);
     
     if (MPMusicPlaybackStatePlaying == [_player playbackState]
        && MPMusicPlaybackStatePaused == _lastState
        && time < 0.8f)
     {
+        NSLog(@"call startDictation");
         _isPushedArtistButton = YES;
         _isPushedSongButton = NO;
         [self startDictation];
@@ -185,6 +186,7 @@
     [query addFilterPredicate:artistNamePredicate];
     
     if (0 != [[query items] count]) {
+        [_player setQueueWithQuery:nil];
         [_player setQueueWithQuery:query];  // 検索してヒットしたアーティストの曲を再生キューにセット
         [_player setShuffleMode:MPMusicShuffleModeSongs]; // セットしたキューをシャッフル
         [_player play]; // 再生する
@@ -217,10 +219,12 @@
 }
 
 - (void)timerDidEnd {
+    NSLog(@"call stopDictation, timerDidEnd");
     [self stopDictation];
 }
 
 - (void)stopDictation {
+    NSLog(@"In stopDictation");
     [_dictationController performSelector:@selector(stopDictation)];
 }
 
@@ -329,4 +333,11 @@
     }
 }
 
+- (IBAction)pushDebug:(id)sender {
+    [self startDictation];
+    [self cancelDictation];
+    [self stopDictation];
+    
+//    [_dictationController performSelector:@selector(releaseConnection)];
+}
 @end

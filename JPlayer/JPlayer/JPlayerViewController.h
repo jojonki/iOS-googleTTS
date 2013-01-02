@@ -46,4 +46,5 @@
 
 @property (strong, nonatomic) IBOutlet UILabel *debugLabel;
 
+- (IBAction)pushDebug:(id)sender;
 @end
