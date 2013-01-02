@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		79C8CD551694468D006D63B9 /* oden72.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C8CD541694468D006D63B9 /* oden72.png */; };
-		79C8CD5716944693006D63B9 /* oden144.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C8CD5616944693006D63B9 /* oden144.png */; };
+		79C8CD5A1694479F006D63B9 /* oden72.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C8CD581694479F006D63B9 /* oden72.png */; };
+		79C8CD5B1694479F006D63B9 /* oden144.png in Resources */ = {isa = PBXBuildFile; fileRef = 79C8CD591694479F006D63B9 /* oden144.png */; };
 		79DCFD2116943E1A009D2BC2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DCFD2016943E1A009D2BC2 /* UIKit.framework */; };
 		79DCFD2316943E1A009D2BC2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DCFD2216943E1A009D2BC2 /* Foundation.framework */; };
 		79DCFD2516943E1A009D2BC2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79DCFD2416943E1A009D2BC2 /* CoreGraphics.framework */; };
@@ -26,8 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		79C8CD541694468D006D63B9 /* oden72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oden72.png; sourceTree = "<group>"; };
-		79C8CD5616944693006D63B9 /* oden144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = oden144.png; sourceTree = "<group>"; };
+		79C8CD581694479F006D63B9 /* oden72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oden72.png; path = GoogleTTS/Images/oden72.png; sourceTree = "<group>"; };
+		79C8CD591694479F006D63B9 /* oden144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = oden144.png; path = GoogleTTS/Images/oden144.png; sourceTree = "<group>"; };
 		79DCFD1C16943E1A009D2BC2 /* GoogleTTS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoogleTTS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79DCFD2016943E1A009D2BC2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		79DCFD2216943E1A009D2BC2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -68,8 +68,8 @@
 		79C8CD4116944543006D63B9 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				79C8CD5616944693006D63B9 /* oden144.png */,
-				79C8CD541694468D006D63B9 /* oden72.png */,
+				79C8CD581694479F006D63B9 /* oden72.png */,
+				79C8CD591694479F006D63B9 /* oden144.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -191,8 +191,8 @@
 				79DCFD3716943E1A009D2BC2 /* Default-568h@2x.png in Resources */,
 				79DCFD3A16943E1A009D2BC2 /* MainStoryboard_iPhone.storyboard in Resources */,
 				79DCFD3D16943E1A009D2BC2 /* MainStoryboard_iPad.storyboard in Resources */,
-				79C8CD551694468D006D63B9 /* oden72.png in Resources */,
-				79C8CD5716944693006D63B9 /* oden144.png in Resources */,
+				79C8CD5A1694479F006D63B9 /* oden72.png in Resources */,
+				79C8CD5B1694479F006D63B9 /* oden144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
